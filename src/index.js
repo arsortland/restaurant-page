@@ -1,13 +1,28 @@
 import "./style.css";
-import "./home.js";
-import BG from "./bg.jpeg";
+import { createel } from "./home";
 
-// const comp = () => {
-//   const element = document.createElement("div");
-//   element.innerHTML = "testing22";
-//   element.classList.add("hello");
+const container = document.querySelector(".container");
 
-//   return element;
-// };
+const header = document.createElement("div");
+header.classList.add("header");
 
-// document.body.appendChild(comp());
+const content = document.createElement("div");
+content.classList.add("content");
+
+const infobottom = document.createElement("div");
+infobottom.classList.add("infobottom");
+
+container.appendChild(header);
+container.appendChild(content);
+container.appendChild(infobottom);
+
+header.appendChild(createel());
+
+//Tenke gjennom hvordan "content" klassen skal organiseres mellom tabs
+//Lage noe animasjon til homepage? ALternativt en loader?
+
+//Huske på iffies og factories. Kanskje bruke factory til menyen?
+
+//Lage en div i hver modul(til hver tab) som innholdet blir lagt over til.
+
+//faktorere koden så det blir bra!
