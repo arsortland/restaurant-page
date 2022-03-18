@@ -23,15 +23,36 @@ body{
 .header{
     grid-area: header;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.header > .text {
-    font-size: 50px;
-    color: rgb(0, 0, 0);
+.header > .nav > button {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 0;
 }
+
+.header > .nav > button:hover{
+    text-decoration: underline;
+    transform: translateY(-7px);
+}
+
 
 .content{
     grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content > * {
+    width: 80%;
+    padding: 3rem;
+    border: 2px solid green;
 
 }
 
