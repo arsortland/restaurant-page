@@ -1,7 +1,7 @@
 import "./style.css";
 //import { createel } from "./home";
 import * as homejs from "./home";
-import chefpic from "./chef.jpeg";
+import * as menujs from "./menu";
 
 const container = document.querySelector(".container");
 const header = document.createElement("div");
@@ -45,6 +45,8 @@ home.addEventListener("click", () => {
 menu.addEventListener("click", () => {
   //load menucontent.
   content.textContent = "";
+  menujs.platters();
+  content.appendChild(menujs.pizza); //MAKE IT WORK!
 });
 
 contact.addEventListener("click", () => {

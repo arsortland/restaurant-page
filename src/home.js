@@ -6,9 +6,9 @@ export const welcomecont = () => {
   welcometext.setAttribute("style", "white-space: pre;");
   welcometext.textContent = "Welcome to our Restaurant!\r\n";
   welcometext.textContent +=
-    "Here at our establishment we pride ourselves with only using the best in-season ingredients\r\n";
+    "Here at our establishment we pride ourselves with only using the best in-season ingredients.\r\n";
   welcometext.textContent +=
-    "At the same time we have a vision to think sustainability and has been meat-free since 2009!\r\n";
+    "At the same time we have a vision to think sustainability and has been meat-free since 2009.\r\n";
   welcometext.textContent +=
     "Come try out our menu, you will not be dissapointed!";
 
@@ -20,11 +20,11 @@ export const aboutcont = () => {
   abouttext.classList.add("abouttext");
   abouttext.setAttribute("style", "white-space: pre;");
   abouttext.textContent =
-    "Founded in 2009 we have been a staple in the local community ever since \r\n";
+    "Founded in 2009 we have been a staple in the local community ever since.\r\n";
   abouttext.textContent +=
     "We believe we can make food on par with the best in the world,\r\n";
   abouttext.textContent +=
-    "while also making sure no human or animal needs to suffer in the process \r\n";
+    "while also making sure no human or animal needs to suffer in the process! \r\n";
 
   return abouttext;
 };
