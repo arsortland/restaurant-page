@@ -1,6 +1,7 @@
 import "./style.css";
 //import { createel } from "./home";
 import * as homejs from "./home";
+import chefpic from "./chef.jpeg";
 
 const container = document.querySelector(".container");
 const header = document.createElement("div");
@@ -29,12 +30,16 @@ nav.appendChild(menu);
 nav.appendChild(contact);
 
 //instead of this, start with HOME set to active.
-content.appendChild(homejs.welcomecont());
+// content.appendChild(homejs.welcomecont());
+// content.appendChild(homejs.aboutcont());
+// content.appendChild(homejs.staffcont());
 
 home.addEventListener("click", () => {
   //load homecontent.
   content.textContent = "";
   content.appendChild(homejs.welcomecont());
+  content.appendChild(homejs.aboutcont());
+  content.appendChild(homejs.staffcont());
 });
 
 menu.addEventListener("click", () => {

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Alata;
+    src: url('./Alata-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +13,11 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'Alata';
 }
 .container{
     height: 100vh;
+    line-height: 1.6;
     display: grid;
     grid-template-columns: 4fr 7fr;
     grid-template-rows: 2fr 20fr 1.2fr;
@@ -29,11 +36,12 @@ body{
 }
 
 .header > .nav > button {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
     background-color: transparent;
     border: 0;
+    font-family: inherit;
 }
 
 .header > .nav > button:hover{
@@ -43,22 +51,34 @@ body{
 
 
 .content{
+    font-size: 1rem;
     grid-area: content;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.content > * {
+.content > div {
     width: 80%;
     padding: 3rem;
-    border: 2px solid green;
-
+    border: 2px solid rgb(0, 0, 0);
+    margin: 3rem;
+    text-align: center;
 }
+
+#chefpic{
+    margin: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    border-radius: 25px;
+}
+
 
 .infobottom{
     grid-area: infobottom;
     opacity: 0.5;
     background-color: black;
-
 }

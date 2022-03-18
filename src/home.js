@@ -1,3 +1,5 @@
+import chefpic from "./chef.jpeg";
+
 export const welcomecont = () => {
   const welcometext = document.createElement("div");
   welcometext.classList.add("welcometext");
@@ -14,11 +16,24 @@ export const welcomecont = () => {
 };
 
 export const aboutcont = () => {
-  //about content here:
+  const abouttext = document.createElement("div");
+  abouttext.classList.add("abouttext");
+  abouttext.setAttribute("style", "white-space: pre;");
+  abouttext.textContent =
+    "Founded in 2009 we have been a staple in the local community ever since \r\n";
+  abouttext.textContent +=
+    "We believe we can make food on par with the best in the world,\r\n";
+  abouttext.textContent +=
+    "while also making sure no human or animal needs to suffer in the process \r\n";
+
+  return abouttext;
 };
 
 export const staffcont = () => {
-  //pic of fantasy-staff:
   const staffpic = document.createElement("img");
-  // find pic: staffpic.src("")
+  staffpic.classList.add("staffpic");
+  staffpic.setAttribute("id", "chefpic");
+  staffpic.src = chefpic;
+
+  return staffpic;
 };
