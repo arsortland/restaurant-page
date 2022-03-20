@@ -1,24 +1,24 @@
-import pizzapng from "./pizza.png";
+export const platters = (name, description, logo) => {
+  const cont = document.createElement("div");
 
-export const platters = (logo, name, description) => {
-  const makeplatter = () => {
-    const platter = document.createElement("div");
-    platter.classList.add("platter");
+  const context = document.createElement("div");
+  const desc = document.createElement("div");
+  const img = document.createElement("img");
 
-    const img = document.createElement("img");
-    img.classList.add("platterimg");
-    staffpic.src = logo;
+  cont.classList.add("menuitem");
+  context.classList.add("menutext");
+  desc.classList.add("menudesc");
+  img.classList.add("menuimg");
 
-    const plattername = document.createElement("div");
-    plattername.classList.add("plattername");
-    plattername.textContent = name;
+  cont.appendChild(img);
+  cont.appendChild(context);
+  cont.appendChild(desc);
+  context.setAttribute("style", "white-space: pre;");
 
-    const platterdesc = document.createElement("div");
-    platterdesc.classList.add("platterdesc");
-    platterdesc.textContent = description;
-  };
+  img.src = logo;
 
-  return { makeplatter };
+  context.textContent = name;
+  desc.textContent = description;
+
+  return cont;
 };
-
-export const pizza = platters(pizzapng, "Pizza", "Delicious italian pizza");

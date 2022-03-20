@@ -67,6 +67,7 @@ body{
     text-align: center;
 }
 
+
 #chefpic{
     margin: 3rem;
     background-repeat: no-repeat;
@@ -81,4 +82,32 @@ body{
     grid-area: infobottom;
     opacity: 0.5;
     background-color: black;
+}
+
+.menuitem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+    "menuimg menutext"
+    "menuimg menudesc";
+    height: 10rem;
+}
+
+.menutext{
+    grid-area: menutext;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.menuimg{
+    border-radius: 50%;
+    grid-area: menuimg;
+    height: 9rem;
+}
+
+.menudesc{
+    grid-area: menudesc;
+    font-size: 1.3rem;
+    text-align: center;
 }
