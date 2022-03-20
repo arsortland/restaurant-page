@@ -1,6 +1,7 @@
 import "./style.css";
 import * as homejs from "./home";
 import * as menujs from "./menu";
+import * as contactjs from "./contact";
 import pizzapng from "./pizza2.jpeg";
 import calzonepng from "./calzone.png";
 import lasagnapng from "./lasagna.jpeg";
@@ -35,13 +36,6 @@ nav.appendChild(home);
 nav.appendChild(menu);
 nav.appendChild(contact);
 
-//instead of this, start with HOME set to active.
-// content.appendChild(homejs.welcomecont());
-// content.appendChild(homejs.aboutcont());
-// content.appendChild(homejs.staffcont());
-
-//Set background to each tab to make it fit content on each screen better?
-
 home.addEventListener("click", () => {
   content.textContent = "";
   content.appendChild(homejs.welcomecont());
@@ -71,7 +65,7 @@ menu.addEventListener("click", () => {
     )
   );
   meny.appendChild(
-    menujs.platters("Falafal", "On a bed of roses and tastyness", falafelpng)
+    menujs.platters("Falafel", "On a bed of roses and tastyness", falafelpng)
   );
   meny.appendChild(
     menujs.platters(
@@ -84,13 +78,11 @@ menu.addEventListener("click", () => {
 
 contact.addEventListener("click", () => {
   content.textContent = "";
+  content.appendChild(contactjs.mapimg());
+  content.appendChild(contactjs.adress());
 });
 
-//Tenke gjennom hvordan "content" klassen skal organiseres mellom tabs
-//Lage noe animasjon til homepage? ALternativt en loader?
-
-//Huske på iffies og factories. Kanskje bruke factory til menyen?
-
-//Lage en div i hver modul(til hver tab) som innholdet blir lagt over til.
-
-//faktorere koden så det blir bra!
+//Noe animasjon i bytte /eller menyvalg?
+//Sette HOme til active så den loader inn den taben når siden blir lastet inn.
+//Underline over active knapp!
+//Media queries og sjekke forskjellige størrelser.
