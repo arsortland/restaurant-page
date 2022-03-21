@@ -7,6 +7,7 @@ import calzonepng from "./calzone.png";
 import lasagnapng from "./lasagna.jpeg";
 import falafelpng from "./falafel.jpeg";
 import burgerpng from "./burger.jpeg";
+import bg from "./bg.jpeg";
 
 const container = document.querySelector(".container");
 const header = document.createElement("div");
@@ -82,7 +83,10 @@ contact.addEventListener("click", () => {
   content.appendChild(contactjs.adress());
 });
 
-//Noe animasjon i bytte /eller menyvalg?
-//Sette HOme til active så den loader inn den taben når siden blir lastet inn.
-//Underline over active knapp!
+window.onload = () => {
+  home.click();
+  home.focus();
+};
+
 //Media queries og sjekke forskjellige størrelser.
+//refaktorering

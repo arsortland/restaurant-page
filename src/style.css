@@ -10,21 +10,21 @@
 
 body{
     background: url('./bg.jpeg');
-    background-repeat: no-repeat;
+    background-repeat:repeat;
     background-position: center;
     background-size: cover;
     font-family: 'Alata';
+    height: max-content;
 }
 .container{
     height: 100vh;
     line-height: 1.6;
     display: grid;
     grid-template-columns: 4fr 7fr;
-    grid-template-rows: 1fr 20fr 1fr;
+    grid-template-rows: 1fr 20fr;
     grid-template-areas:
     "header header"
-    ". content"
-    "infobottom infobottom";
+    ". content";
 }
 
 .header{
@@ -41,12 +41,15 @@ body{
     margin-right: 1rem;
     background-color: transparent;
     border: 0;
+    outline: 0;
     font-family: inherit;
 }
 
 .header > .nav > button:hover{
-    text-decoration: underline;
     transform: translateY(-7px);
+}
+.header > .nav > button:focus{
+    text-decoration: underline;
 }
 
 
@@ -61,7 +64,7 @@ body{
 
 .content > div {
     width: 80%;
-    padding: 3rem;
+    padding: 2rem;
     border: 2px solid rgb(0, 0, 0);
     margin: 3rem;
     text-align: center;
@@ -69,19 +72,12 @@ body{
 
 
 #chefpic{
-    margin: 3rem;
+    margin: 1rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 90%;
+    height: 20rem;
     border-radius: 25px;
-}
-
-
-.infobottom{
-    grid-area: infobottom;
-    opacity: 0.5;
-    background-color: black;
 }
 
 .menuitem{
@@ -110,4 +106,74 @@ body{
     grid-area: menudesc;
     font-size: 1.3rem;
     text-align: center;
+}
+
+.adress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        background: none;
+        background-repeat:repeat;
+        background-position: center;
+        background-size: cover;
+        font-family: 'Alata';
+        height: max-content;
+    }
+    .container{
+        height: 100vh;
+        line-height: 1;
+        display: grid;
+        grid-template-columns: 4fr 7fr;
+        grid-template-rows: 1fr 20fr;
+        grid-template-areas:
+        "header header"
+        "content content";
+    }
+
+    .header > .nav > button {
+        font-size: 1.2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        font-family: inherit;
+    }
+
+    .menuitem{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 5fr;
+        grid-template-areas:
+        "menutext"
+        "menudesc"
+        "menuimg";
+        height: 15rem;
+    }
+
+    .menuitem > img {
+        height: 7rem;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .content > div {
+        width: 80%;
+        padding: 0;
+        border: none;
+        margin: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .map > iframe {
+        width: 99vw;
+        align-self: center;
+        justify-self: center;
+    }
 }
