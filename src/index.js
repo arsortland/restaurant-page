@@ -17,13 +17,11 @@ const menu = document.createElement("button");
 const contact = document.createElement("button");
 const content = document.createElement("div");
 const infobottom = document.createElement("div");
-
 const meny = document.createElement("div");
 
 home.textContent = "Home";
 menu.textContent = "Menu";
 contact.textContent = "Contact";
-
 header.classList.add("header");
 nav.classList.add("nav");
 content.classList.add("content");
